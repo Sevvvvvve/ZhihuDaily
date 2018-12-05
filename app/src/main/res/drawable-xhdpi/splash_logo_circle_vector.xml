@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="29dp"
+    android:height="29dp"
+    android:viewportWidth="29"
+    android:viewportHeight="29">
+
+    <path
+        android:name="logo_circle"
+        android:strokeColor="#ffc2c5cc"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:pathData="M14.7447,26.5111 C8.25827,26.5111,3,21.248,3,14.7556 C3,8.26314,8.25827,3,14.7447,3 C21.2311,3,26.4894,8.26314,26.4894,14.7556 C" />
+</vector>

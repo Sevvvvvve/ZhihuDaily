@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/story_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.story.StoryFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@id/story_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?activityBackground"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@id/scroll_view_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clipChildren="false">
+
+            <ProgressBar
+                android:id="@id/story_loading_bar"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@id/story_photo_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_image_height">
+
+                <ImageView
+                    android:id="@id/story_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:id="@id/story_image_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?bigImageMask" />
+
+                <TextView
+                    android:id="@id/story_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:textAppearance="@style/TextAppearance.Story.Title" />
+
+                <TextView
+                    android:id="@id/story_image_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:textAppearance="@style/TextAppearance.Story.ImageSource" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/content_container"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <WebView
+                    android:id="@id/story_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_size"
+        android:paddingTop="@dimen/status_bar_height"
+        android:background="?colorPrimary"
+        android:elevation="4dp"
+        app:titleTextAppearance="@style/ActionBar.TitleText.Light"
+        app:layout_behavior="com.vaynefond.zhihudaily.ui.story.ToolbarBehavior" />
+</android.support.design.widget.CoordinatorLayout>

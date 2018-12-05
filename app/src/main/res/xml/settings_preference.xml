@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="@string/pref_category_general"
+        android:key="@string/pref_category_key_general">
+        <CheckBoxPreference
+            android:id="@id/pref_auto_offline"
+            android:title="@string/pref_auto_offline"
+            android:key="@string/pref_key_auto_offline"
+            android:summary="@string/pref_auto_offline_prompt"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+        <CheckBoxPreference
+            android:id="@id/pref_no_image_mode"
+            android:title="@string/pref_no_image_mode"
+            android:key="@string/pref_key_no_image_mode"
+            android:summary="@string/pref_no_image_mode_prompt"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false" />
+
+        <CheckBoxPreference
+            android:id="@id/pref_big_font_mode"
+            android:title="@string/pref_bit_font_mode"
+            android:key="@string/pref_key_big_font_mode"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_category_other"
+        android:key="@string/pref_category_key_other">
+        <CheckBoxPreference
+            android:id="@id/pref_push"
+            android:title="@string/pref_push"
+            android:key="@string/pref_key_push"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+        <CheckBoxPreference
+            android:id="@id/pref_comment_share"
+            android:title="@string/pref_comment_share"
+            android:key="@string/pref_key_comment_share"
+            android:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:id="@id/pref_clear_cache"
+            android:title="@string/pref_clear_cache"
+            android:key="@string/pref_key_clear_cache"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:id="@id/pref_version_check"
+            android:title="@string/pref_version_check"
+            android:key="@string/pref_key_version_check"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_category_feedback"
+        android:key="@string/pref_category_key_feedback">
+        <Preference
+            android:id="@id/pref_feedback"
+            android:title="@string/pref_feedback"
+            android:key="@string/pref_key_feedback"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

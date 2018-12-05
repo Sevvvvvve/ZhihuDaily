@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    android:drawable="@drawable/splash_logo_circle_vector"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="logo_circle" android:animation="@animator/anim_splash_logo" />
+</animated-vector>

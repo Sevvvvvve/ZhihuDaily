@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/nav_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?attr/navBackgroundNormal">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp">
+
+        <ImageView
+            android:id="@id/nav_item_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/menu_home" />
+
+        <TextView
+            android:id="@id/nav_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/nav_item_logo"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.Drawer.Item"
+            android:text="@string/home" />
+
+        <ImageView
+            android:id="@id/nav_item_subscribe_button"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

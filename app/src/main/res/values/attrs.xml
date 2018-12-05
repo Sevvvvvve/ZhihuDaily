@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="activityBackground" format="reference|color" />
+    <attr name="activityBackgroundGray" format="reference|color" />
+    <attr name="backgroundGray" format="reference" />
+    <attr name="bigImageMask" format="reference" />
+    <attr name="cardItemBackground" format="reference|color" />
+    <attr name="lightDarkModeIcon" format="reference" />
+    <attr name="drawerBackgroundItemPrimary" format="reference|color" />
+    <attr name="drawerBackgroundPrimary" format="reference|color" />
+    <attr name="navBackgroundNormal" format="reference" />
+    <attr name="cardItemTitleTextColor" format="reference" />
+    <attr name="itemTitleUnreadTextColor" format="reference|color" />
+    <attr name="commentAuthorNameTextColor" format="reference" />
+    <attr name="commentContentTextColor" format="reference" />
+    <attr name="commentExpandButtonBackground" format="reference" />
+    <attr name="commentExpandButtonTextColor" format="reference" />
+    <attr name="commentHeaderTitleTextColor" format="reference" />
+    <attr name="commentNoCommentImageSource" format="reference" />
+    <attr name="commentNoCommentPromptTextColor" format="reference" />
+    <attr name="commentReplyContentTextColor" format="reference" />
+    <attr name="commentReplyPromptBackground" format="reference" />
+    <attr name="commentReplyPromptTextColor" format="reference" />
+</resources>

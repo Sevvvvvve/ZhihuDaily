@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.javaVersion
+        targetCompatibility rootProject.ext.javaVersion
+    }
+
+    sourceSets {
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.libSupportV4
+    implementation rootProject.ext.libAppcompatV7
+    implementation rootProject.ext.libDesign
+    implementation rootProject.ext.libRecyclerViewV7
+    implementation rootProject.ext.libCardViewV7
+    implementation rootProject.ext.libPreferenceV7
+    implementation rootProject.ext.libConstraintLayout
+    implementation rootProject.ext.libGson
+    implementation rootProject.ext.libPicasso
+    implementation rootProject.ext.libButterKnife
+    annotationProcessor rootProject.ext.libButterKnifeCompiler
+    implementation rootProject.ext.libViewPagerIndicator
+    //test & Espresso UI Testing
+    testImplementation rootProject.ext.libJunit
+    androidTestImplementation rootProject.ext.libTestRunner
+    androidTestImplementation rootProject.ext.libTestEspressoCore
+    androidTestImplementation rootProject.ext.libTestExpressoContrib
+    androidTestImplementation rootProject.ext.libTestExpressoIntents
+    androidTestImplementation rootProject.ext.libTestExpressoIdling
+    implementation rootProject.ext.libTextEspressoIdlingResource
+    //rxjava
+    implementation rootProject.ext.libRxjava
+    implementation rootProject.ext.libRxAndroid
+    //retrofit
+    implementation rootProject.ext.libRetrofit
+    implementation rootProject.ext.libRetrofitConverters
+    implementation rootProject.ext.libRetrofitAdapterRxjava
+    implementation rootProject.ext.libRetrofitConverterGson
+    implementation rootProject.ext.libOkhttp
+    //room
+    implementation rootProject.ext.libRoomRuntime
+    annotationProcessor rootProject.ext.libRoomCompiler
+    testImplementation rootProject.ext.libRoomTesting
+    implementation rootProject.ext.libRoomRxjava
+    implementation rootProject.ext.libRoomGuava
+    //dagger
+    implementation rootProject.ext.libDagger
+    annotationProcessor rootProject.ext.libDaggerCompiler
+    implementation rootProject.ext.libDaggerAndroid
+    annotationProcessor rootProject.ext.libDaggerAndroidProcessor
+    implementation rootProject.ext.libDaggerAndroidSupport
+}

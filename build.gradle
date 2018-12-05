@@ -1,0 +1,98 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+def supportLibraryVersion = '28.0.0'
+def constraintLayoutVersion = '1.1.3'
+def junitVersion = '4.12'
+def testRunnerVersion = '1.0.2'
+def rulesVersion = '1.0.1'
+def espressoVersion = '3.0.2'
+def gsonVersion = '2.8.5'
+def retrofitVersion = '2.4.0'
+def rxjavaVersion = '2.2.3'
+def rxandroidVersion = '2.1.0'
+def okhttpVersion = '3.11.0'
+def roomVersion = '1.1.1'
+def roomGuavaVersion = '1.1.1'
+def picassoVersion = '2.71828'
+def butterknifeVersion = '9.0.0-rc1'
+def daggerVersion = '2.19'
+def viewpagerindicatorVersion = '2.4.1'
+
+project.ext {
+    applicationId = 'com.vaynefond.zhihudaily'
+    versionCode = 1
+    versionName = '1.0'
+
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
+    javaVersion = JavaVersion.VERSION_1_8
+
+    libDesign = "com.android.support:design:${supportLibraryVersion}"
+    libSupportV4 = "com.android.support:support-v4:${supportLibraryVersion}"
+    libAppcompatV7 = "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    libRecyclerViewV7 = "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+    libCardViewV7 = "com.android.support:cardview-v7:${supportLibraryVersion}"
+    libPreferenceV7 = "com.android.support:preference-v7:${supportLibraryVersion}"
+    libConstraintLayout = "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}"
+    libGson = "com.google.code.gson:gson:${gsonVersion}"
+    libPicasso = "com.squareup.picasso:picasso:${picassoVersion}"
+    libButterKnife = "com.jakewharton:butterknife:${butterknifeVersion}"
+    libButterKnifeCompiler = "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
+    libViewPagerIndicator = "com.github.JakeWharton:ViewPagerIndicator:${viewpagerindicatorVersion}"
+    libDagger = "com.google.dagger:dagger:${daggerVersion}"
+    libDaggerCompiler = "com.google.dagger:dagger-compiler:${daggerVersion}"
+    libDaggerAndroid = "com.google.dagger:dagger-android:${daggerVersion}"
+    libDaggerAndroidProcessor = "com.google.dagger:dagger-android-processor:${daggerVersion}"
+    libDaggerAndroidSupport = "com.google.dagger:dagger-android-support:${daggerVersion}"
+
+    libJunit = "junit:junit:${junitVersion}"
+    libTestRunner = "com.android.support.test:runner:${testRunnerVersion}"
+    libTestEspressoCore = "com.android.support.test.espresso:espresso-core:${espressoVersion}"
+    libTestExpressoContrib = "com.android.support.test.espresso:espresso-contrib:${espressoVersion}"
+    libTestExpressoIntents = "com.android.support.test.espresso:espresso-intents:${espressoVersion}"
+    libTestExpressoIdling = "com.android.support.test.espresso.idling:idling-concurrent:${espressoVersion}"
+    libTextEspressoIdlingResource = "com.android.support.test.espresso:espresso-idling-resource:${espressoVersion}"
+
+    libRxjava = "io.reactivex.rxjava2:rxjava:${rxjavaVersion}"
+    libRxAndroid = "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}"
+
+    libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    libRetrofitConverters = "com.squareup.retrofit2:retrofit-converters:${retrofitVersion}"
+    libRetrofitAdapterRxjava = "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    libRetrofitConverterGson = "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    libOkhttp = "com.squareup.okhttp3:okhttp:${okhttpVersion}"
+
+    libRoomRuntime = "android.arch.persistence.room:runtime:${roomVersion}"
+    libRoomCompiler = "android.arch.persistence.room:compiler:${roomVersion}"
+    libRoomTesting = "android.arch.persistence.room:testing:${roomVersion}"
+    libRoomRxjava = "android.arch.persistence.room:rxjava2:${roomVersion}"
+    libRoomGuava = "android.arch.persistence.room:guava:${roomGuavaVersion}"
+}

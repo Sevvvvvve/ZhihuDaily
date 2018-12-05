@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vaynefond.zhihudaily.base.widget.BaseRecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/drawer_nav_recyclerview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/drawerBackgroundItemPrimary"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    tools:context=".ui.navigation.NavigationFragment" />

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@id/daily_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_image_height">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="4dp"
+                app:collapsedTitleTextAppearance="@style/ActionBar.TitleText.Light"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:id="@id/top_pager_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@id/top_story_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@id/top_story_pager_indicator"
+                        android:paddingBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        app:strokeWidth="0dp"
+                        app:fillColor="#ffffffff"
+                        app:pageColor="#ff888888" />
+                </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <com.vaynefond.zhihudaily.base.widget.BaseRecyclerView
+            android:id="@id/story_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?activityBackgroundGray"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
